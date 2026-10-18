@@ -1,0 +1,156 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #020713;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+/* Header Container */
+.navbar-header {
+  width: 100%;
+  background: rgba(2, 7, 19, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Image Styling */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 50px; 
+  width: auto;
+  object-fit: contain;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-item {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #00a8ff;
+}
+
+/* Active Underline Effect */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00a8ff;
+  box-shadow: 0 0 8px #00a8ff;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after,
+.nav-item.active::after {
+  width: 100%;
+}
+
+/* Right Section (Phone + Button) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Phone Contact Link */
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+}
+
+.phone-link i {
+  color: #00a8ff;
+  font-size: 14px;
+}
+
+.phone-link:hover {
+  color: #00a8ff;
+}
+
+/* Appointment Button */
+.btn-appointment {
+  background: #0088ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0, 136, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-appointment:hover {
+  background: #0066cc;
+  box-shadow: 0 0 20px rgba(0, 136, 255, 0.7);
+}
+
+/* Responsive Styling for Mobile */
+@media (max-width: 992px) {
+  .nav-links {
+    gap: 18px;
+  }
+  
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .phone-link {
+    display: none; 
+  }
+}
