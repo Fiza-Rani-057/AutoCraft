@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,17 +10,16 @@
 </head>
 <body>
 
-  <!-- Ambient Background Glows for Glassmorphism Effect -->
+  <!-- Ambient Background Glows -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
 
   <!-- Glassmorphic Navbar -->
   <header class="navbar-header">
     <nav class="navbar">
-      <!-- Logo Section with Image -->
+      <!-- Logo Section -->
       <a href="#" class="nav-logo">
-        <img src="Images/logo_img-removebg-preview.png" alt="AutoCraft Detailing Logo"
-         class="logo-img">
+        <img src="Images/logo_img-removebg-preview.png" alt="AutoCraft Detailing Logo" class="logo-img">
       </a>
 
       <!-- Navigation Links -->
@@ -31,18 +29,25 @@
         <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
         <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        
+        <!-- Mobile View Button (Drop-down Menu ke andar) -->
+        <li class="nav-item mobile-btn-item">
+          <a href="#booking" class="btn-appointment">
+            <div class="wrap">
+              <p>BOOK APPOINTMENT</p>
+            </div>
+          </a>
+        </li>
       </ul>
 
-      <!-- Action Section (Pearl Style Appointment Button) -->
+      <!-- Desktop View Button Section -->
       <div class="nav-actions">
-        <a href="#booking" class="btn-appointment">
+        <a href="#booking" class="btn-appointment desktop-btn">
           <div class="wrap">
-            <p>
-              BOOK APPOINTMENT
-            </p>
+            <p>BOOK APPOINTMENT</p>
           </div>
         </a>
-
+        
         <!-- Mobile Menu Toggle Button -->
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <i class="fa-solid fa-bars"></i>
@@ -52,7 +57,6 @@
   </header>
 
   <script>
-    // Mobile Menu Toggle Script
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
 

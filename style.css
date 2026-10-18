@@ -339,3 +339,74 @@ body {
     transform: translateY(0);
   }
 }
+/* ==========================================
+   Desktop / Mobile Responsive Utility Classes
+   ========================================== */
+
+/* By default (Desktop), Menu Button hidden and Desktop Button visible */
+.mobile-btn-item {
+  display: none;
+}
+
+.desktop-btn {
+  display: inline-block;
+}
+
+/* ==========================================
+   Mobile View Styles (992px & below)
+   ========================================== */
+@media (max-width: 992px) {
+  /* Hide Desktop Top-Right Action Button */
+  .desktop-btn {
+    display: none !important;
+  }
+
+  /* Show Button Inside Mobile Menu */
+  .mobile-btn-item {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .mobile-btn-item .btn-appointment {
+    width: 100%;
+    display: block;
+  }
+
+  .mobile-btn-item .btn-appointment .wrap {
+    padding: 12px 20px;
+  }
+
+  .mobile-btn-item .btn-appointment .wrap p {
+    justify-content: center;
+  }
+
+  /* Responsive Mobile Dropdown Container */
+  .nav-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 15px;
+    right: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 20px;
+    background: rgba(5, 11, 24, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 136, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
