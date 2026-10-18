@@ -1,4 +1,17 @@
-/* Universal Reset */
+
+ /* ========================================== 
+   1. Global Reset & Theme Variables 
+========================================== */
+:root {
+  --bg-dark: #050b18;
+  --bg-card: rgba(2, 39, 97, 0.25);
+  --primary-blue: #0088ff;
+  --neon-cyan: #00d2ff;
+  --text-white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --radius-pill: 50px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,142 +19,189 @@
 }
 
 body {
-  background-color: #020713;
-  font-family: 'Inter', sans-serif;
-  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Header Container */
+/* ========================================== 
+   2. Background Ambient Glow Effects 
+========================================== */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.glow-1 {
+  width: 350px;
+  height: 350px;
+  background: var(--primary-blue);
+  top: -100px;
+  left: 10%;
+}
+
+.glow-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--neon-cyan);
+  top: 20px;
+  right: 15%;
+  opacity: 0.35;
+}
+
+/* ========================================== 
+   3. Glassmorphic Full-Width Navbar 
+========================================== */
 .navbar-header {
-  width: 100%;
-  background: rgba(2, 7, 19, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 1000;
+  padding: 0; 
 }
 
-.navbar-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 12px 30px;
+.navbar {
+  width: 100%;
+  max-width: 100%; 
+  margin: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  padding: 15px 40px; 
+  background: rgba(5, 11, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 136, 255, 0.25);
+  border-radius: 0;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Logo Image Styling */
-.logo-wrapper {
+/* ========================================== 
+   4. Branding & Logo Component 
+========================================== */
+.nav-logo {
   display: flex;
   align-items: center;
+  gap: 12px;
   text-decoration: none;
 }
 
-.navbar-logo {
-  height: 50px; 
+.logo-icon {
+  font-size: 26px;
+  color: var(--neon-cyan);
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.6));
+}
+
+.logo-img {
+  height: 40px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.4));
 }
 
-/* Navigation Links */
-.nav-links {
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.accent-text {
+  color: var(--neon-cyan);
+}
+
+.brand-sub {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--text-muted);
+}
+
+/* ========================================== 
+   5. Navigation Links & Animations 
+========================================== */
+.nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
+  list-style: none;
 }
 
-.nav-item {
-  color: #cbd5e1;
+.nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
   text-decoration: none;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  padding: 6px 0;
   position: relative;
+  padding: 6px 0;
   transition: color 0.3s ease;
 }
 
-.nav-item:hover,
-.nav-item.active {
-  color: #00a8ff;
+.nav-link:hover, 
+.nav-link.active {
+  color: var(--text-white);
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
 }
 
-/* Active Underline Effect */
-.nav-item::after {
+.nav-link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -6px;
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #00a8ff;
-  box-shadow: 0 0 8px #00a8ff;
+  background: linear-gradient(90deg, var(--primary-blue), var(--neon-cyan));
+  border-radius: 2px;
   transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--neon-cyan);
 }
 
-.nav-item:hover::after,
-.nav-item.active::after {
+.nav-link:hover::after, 
+.nav-link.active::after {
   width: 100%;
 }
 
-/* Right Section (Phone + Button) */
-.nav-right {
+.nav-actions {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
-/* Phone Contact Link */
-.phone-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  transition: color 0.3s ease;
-}
-
-.phone-link i {
-  color: #00a8ff;
-  font-size: 14px;
-}
-
-.phone-link:hover {
-  color: #00a8ff;
-}
-
-/* Navbar Appointment Button with Pearl & Navbar Colors */
+/* ========================================== 
+   6. Pearl Glossy Action Button 
+========================================== */
 .btn-appointment {
-  --white: #00d2ff;
-  --bg: #050b18; /* Navbar dark navy background matching */
-  --radius: 50px;
-  
   display: inline-block;
   outline: none;
   cursor: pointer;
   border: 0;
   position: relative;
-  border-radius: var(--radius);
-  background-color: var(--bg);
+  border-radius: var(--radius-pill);
+  background-color: #050b18;
   text-decoration: none;
   transition: all 0.2s ease;
-  
-  /* Electric Blue & Dark Navy Glow Shadows */
-  box-shadow:
-    inset 0 0.2rem 0.5rem rgba(0, 136, 255, 0.4),
-    inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8),
-    inset 0 -0.3rem 0.6rem rgba(0, 136, 255, 0.3),
-    0 0.8rem 1.5rem rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(0, 136, 255, 0.4);
+  box-shadow: inset 0 0.2rem 0.5rem rgba(0, 136, 255, 0.4), 
+              inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8), 
+              inset 0 -0.3rem 0.6rem rgba(0, 136, 255, 0.3), 
+              0 0.8rem 1.5rem rgba(0, 0, 0, 0.4), 
+              0 0 15px rgba(0, 136, 255, 0.4);
 }
 
 .btn-appointment .wrap {
@@ -157,7 +217,15 @@ body {
   overflow: hidden;
 }
 
-/* Icon Hover Swap (✧ to ✦) with blue glow */
+.btn-appointment .wrap p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  transition: all 0.2s ease;
+  transform: translateY(2%);
+}
+
 .btn-appointment .wrap p span:nth-child(2) {
   display: none;
 }
@@ -168,20 +236,11 @@ body {
 
 .btn-appointment:hover .wrap p span:nth-child(2) {
   display: inline-block;
-  color: #00d2ff;
+  color: var(--neon-cyan);
 }
 
-.btn-appointment .wrap p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
-  transition: all 0.2s ease;
-  transform: translateY(2%);
-}
-
-/* Glossy Glass Highlights in Blue Tone */
-.btn-appointment .wrap::before,
+/* Glossy Highlights */
+.btn-appointment .wrap::before, 
 .btn-appointment .wrap::after {
   content: "";
   position: absolute;
@@ -205,21 +264,16 @@ body {
   bottom: 40%;
   border-radius: 20px 20px 0 0;
   box-shadow: inset 0 6px 6px -6px rgba(0, 210, 255, 0.7);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 136, 255, 0.35) 0%,
-    rgba(0, 0, 0, 0) 60%
-  );
+  background: linear-gradient(180deg, rgba(0, 136, 255, 0.35) 0%, rgba(0, 0, 0, 0) 60%);
 }
 
-/* Hover State */
+/* Button Interactive States */
 .btn-appointment:hover {
-  box-shadow:
-    inset 0 0.2rem 0.5rem rgba(0, 136, 255, 0.6),
-    inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8),
-    inset 0 -0.3rem 0.6rem rgba(0, 210, 255, 0.5),
-    0 1rem 2rem rgba(0, 136, 255, 0.4),
-    0 0 22px rgba(0, 136, 255, 0.7);
+  box-shadow: inset 0 0.2rem 0.5rem rgba(0, 136, 255, 0.6), 
+              inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8), 
+              inset 0 -0.3rem 0.6rem rgba(0, 210, 255, 0.5), 
+              0 1rem 2rem rgba(0, 136, 255, 0.4), 
+              0 0 22px rgba(0, 136, 255, 0.7);
 }
 
 .btn-appointment:hover .wrap::before {
@@ -235,26 +289,57 @@ body {
   transform: translateY(-4%);
 }
 
-/* Active State */
 .btn-appointment:active {
   transform: translateY(2px);
-  box-shadow:
-    inset 0 0.2rem 0.4rem rgba(0, 136, 255, 0.6),
-    inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8),
-    0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0.2rem 0.4rem rgba(0, 136, 255, 0.6), 
+              inset 0 -0.1rem 0.2rem rgba(0, 0, 0, 0.8), 
+              0 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive Styling for Mobile */
+/* ========================================== 
+   7. Responsive Layout & Mobile Menu 
+========================================== */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+}
+
 @media (max-width: 992px) {
-  .nav-links {
-    gap: 18px;
+  .mobile-toggle {
+    display: block;
   }
   
-  .nav-item {
-    font-size: 13px;
+  .navbar {
+    padding: 15px 24px; /* Reduced side-padding for smaller devices */
   }
 
-  .phone-link {
-    display: none; 
+  .nav-menu {
+    position: absolute;
+    top: 100%; /* Drops cleanly from the base of the full-width navbar */
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    padding: 24px;
+    background: rgba(5, 11, 24, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 136, 255, 0.3);
+    border-radius: 0; /* Keeps full width structural logic on mobile */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 }
