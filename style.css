@@ -569,3 +569,129 @@ body {
   margin-bottom: 0 !important;
   background: #050b18; 
 }
+/* ==========================================
+   Center Aligned Luxury Video Hero Section
+   ========================================== */
+.hero-section-centered {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 80px; 
+}
+
+/* Background Video Styling */
+.hero-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+
+}
+
+/* Dark Radial Overlay */
+.hero-center-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(5, 11, 24, 0.45) 0%,
+    rgba(5, 11, 24, 0.85) 100%
+  );
+  z-index: -1;
+}
+
+/* Center Content Box */
+.hero-center-container {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 24px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title Styling */
+.hero-center-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 62px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+.hero-center-title .glow-text {
+  color: #00d2ff;
+  font-weight: 700;
+  background: linear-gradient(180deg, #ffffff 30%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(0, 210, 255, 0.5));
+}
+
+/* Description Text */
+.hero-center-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0 auto 35px auto;
+  letter-spacing: 0.3px;
+}
+
+/* Button Wrapper */
+.hero-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slide Counter */
+.hero-slide-counter {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-slide-counter span {
+  color: #00d2ff;
+  font-size: 20px;
+}
+
+/* Responsive Mobile Rules */
+@media (max-width: 768px) {
+  .hero-center-title {
+    font-size: 38px;
+  }
+  .hero-center-desc {
+    font-size: 13px;
+  }
+  .hero-slide-counter {
+    display: none; 
+  }
+}
