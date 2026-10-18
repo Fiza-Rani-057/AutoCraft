@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCraft Detailing - Navbar</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <!-- Glassmorphic Navbar -->
+    <header class="navbar-header">
+        <nav class="navbar">
+            <!-- Logo Section -->
+            <a href="#" class="nav-logo">
+                <img src="Images/logo-img-removebg-preview.png" alt="AutoCraft Detailing Logo" class="logo-img">
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="#Testominals" class="nav-link">Testominals</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+
+                <!-- Mobile View Button (Drop-down Menu ke andar) -->
+                <li class="nav-item mobile-btn-item">
+                    <a href="#booking" class="btn-appointment">
+                        <div class="wrap">
+                            <p>BOOK APPOINTMENT</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Desktop View Button Section -->
+            <div class="nav-actions">
+                <a href="#booking" class="btn-appointment desktop-btn">
+                    <div class="wrap">
+                        <p>BOOK APPOINTMENT</p>
+                    </div>
+                </a>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- Navbar End  -->
+    <!-- Hero Section  -->
+<section class="hero-section-centered" id="home">
+  
+  <video autoplay muted loop playsinline class="hero-bg-video">
+    <source src="Images/vedio1.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-center-overlay"></div>
+  <div class="hero-center-container">
+    <h1 class="hero-center-title">
+      Redefining the Art of<br>
+      <span class="glow-text">Auto Detailing</span>
+    </h1>
+
+    <p class="hero-center-desc">
+      Experience next-generation protection, intelligent ceramic technology,<br>
+      and timeless gloss crafted for premium vehicles.
+    </p>
+
+    <div class="hero-btn-wrapper">
+      <a href="#booking" class="btn-appointment">
+        <div class="wrap">
+          <p>
+            BOOK APPOINTMENT
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="hero-slide-counter">
+      <span>01</span> / 05
+    </div>
+  </div>
+</section>
+    <!-- Footer  -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand Info -->
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <img src="Images/logo-img-removebg-preview.png" alt="AutoCraft Detailing Logo"
+                            class="footer-logo-img" />
+                    </a>
+                    <p class="brand-desc">
+                        Premium automotive detailing, paint correction, and 9H ceramic coating services designed to
+                        protect and enhance your vehicle.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#Testominals"><i class="fa-solid fa-chevron-right"></i>Testominals</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Ceramic Coating</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Paint Protection Film</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Interior Detailing</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Paint Correction</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fa-solid fa-location-dot"></i> Main Auto Street, Karachi</li>
+                        <li><i class="fa-solid fa-phone"></i> +92 300 1234567</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@autocraftdetailing.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 AutoCraft Detailing. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End  -->
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+
+</html>
