@@ -347,8 +347,6 @@ body {
 /* ==========================================
    Desktop / Mobile Responsive Utility Classes
    ========================================== */
-
-/* By default (Desktop), Menu Button hidden and Desktop Button visible */
 .mobile-btn-item {
   display: none;
 }
@@ -358,12 +356,10 @@ body {
 }
 
 @media (max-width: 992px) {
-  /* Hide Desktop Top-Right Action Button */
   .desktop-btn {
     display: none !important;
   }
 
-  /* Show Button Inside Mobile Menu */
   .mobile-btn-item {
     display: block;
     width: 100%;
@@ -594,7 +590,7 @@ body {
   height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
-  z-index: -2;
+  z-index: 1;
 
 }
 
