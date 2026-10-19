@@ -2,6 +2,9 @@
  /* ========================================== 
    1. Global Reset & Theme Variables 
 ========================================== */
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --bg-dark: #050b18;
   --bg-card: rgba(2, 39, 97, 0.25);
