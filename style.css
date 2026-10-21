@@ -1058,27 +1058,191 @@ body {
     padding: 20px;
   }
 }
+/*SERVICES SECTION*/
+.services-section {
+  padding: 80px 20px;
+  background: #03060f;
+}
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
 
+.sub-title {
+  color: #38bdf8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
 
+.main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
 
+.main-title span {
+  color: #2563eb;
+}
 
+.section-desc {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  max-width: 580px;
+  margin: 0 auto;
+}
 
+/* 2x2 Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
 
+/* Service Card Design */
+.service-card {
+  background: #070d1a;
+  border: 1.5px solid #1e3a8a;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(30, 58, 138, 0.25);
+  position: relative;
+  overflow: hidden;
+}
 
+.service-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.45);
+  transform: translateY(-4px);
+}
 
+/* Icon / Image Top Container */
+.card-icon-area {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
 
+.card-icon-area i {
+  font-size: 4rem;
+  color: #38bdf8;
+  filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.5));
+}
 
+.card-img-area {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
 
+.card-img-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* Card Titles */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: left;
+}
 
+/* Bullet List */
+.card-list {
+  list-style: none;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
 
+.card-list li {
+  color: #cbd5e1;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
+.card-list li i {
+  font-size: 5px;
+  color: #64748b;
+}
 
+/* Action Buttons Footer */
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+}
 
+.btn-link {
+  color: #60a5fa;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 
+.btn-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
 
+.btn-book {
+  border: 1px solid #3b82f6;
+  background: transparent;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
+.btn-book:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
 
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card {
+    padding: 22px;
+  }
+}
 
